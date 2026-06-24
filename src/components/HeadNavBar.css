@@ -74,8 +74,9 @@
 }
 .navbar-search-button{
     display: flex;
+    
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     background-color: rgb(186, 255, 190);
     width:45px;
     height:40px;

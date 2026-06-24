@@ -2,7 +2,7 @@ import greenLogoImage from "../assets/mobile-logo.svg";
 import logoImage from "../assets/logo.svg";
 import dollarImage from "../assets/font-awesome-money-check.svg";
 import "./CartSection.css";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 export function CartSectionHeader({
   itemToAdd,

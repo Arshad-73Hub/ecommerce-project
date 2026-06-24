@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { useRef } from "react";
 import logoImage from "../assets/logo-white.svg";
 import logoImage2 from "../assets/mobile-logo-white.svg";
@@ -11,9 +11,15 @@ export function HeadNavBar({ productdetails, itemOnSearch, setItemOnSearch }) {
   // function addItemToItemOnSearch(value) {}
   function addItemsonSearch() {
     console.log("inside homepage header");
+    const value = searchInputValue.current.value.toLowerCase().trim();
+
+    if (!value) return;
+
     setItemOnSearch(
       productdetails.filter((item) =>
-        item.productname.toLowerCase().includes(searchInputValue.current.value),
+        item.productname
+          .toLowerCase()
+          .includes(searchInputValue.current.value.toLowerCase()),
       ),
     );
   }

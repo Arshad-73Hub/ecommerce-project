@@ -119,7 +119,7 @@ function App() {
   const [itemOnSearch, setItemOnSearch] = useState([]);
   const [itemToAdd, setItemsToAdd] = useState([]);
   const [orderItemsToAdd, setOrderItemsToAdd] = useState([]);
-  const [trackingItem, setTrackingItem] = useState([]);
+  const [trackingItem, setTrackingItem] = useState(null);
   const [totalValueOfOrder, setTotalValueOfOrder] = useState(0);
 
   const orderPlacedDate = dayjs().format("dddd, MMMM D");
@@ -187,10 +187,10 @@ function App() {
           path="/TrackingSection"
           element={
             <TrackingSection
-              trackingItemImage={trackingItem.imageurl}
-              trackingItemName={trackingItem.productname}
-              trackingItemDeliveryDate={trackingItem.deliveryDate}
-              trackingItemQuantity={trackingItem.itemQuantity}
+              trackingItemImage={trackingItem?.imageurl}
+              trackingItemName={trackingItem?.productname}
+              trackingItemDeliveryDate={trackingItem?.deliveryDate}
+              trackingItemQuantity={trackingItem?.itemQuantity}
             />
           }
         />

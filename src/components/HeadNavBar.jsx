@@ -26,16 +26,17 @@ export function HeadNavBar({ productdetails, itemOnSearch, setItemOnSearch }) {
   function emptySearchItems() {
     searchInputValue.current.value = "";
     setItemOnSearch([]);
-    navigate("/");
   }
 
   return (
     <>
       <div className="headnavbar">
-        <div className="logoImagediv" onClick={emptySearchItems}>
-          <img className="logoImage" src={logoImage} alt="" />
-          <img className="logoImage logoImage2" src={logoImage2} alt="" />
-        </div>
+        <Link to="/">
+          <div className="logoImagediv" onClick={emptySearchItems}>
+            <img className="logoImage" src={logoImage} alt="" />
+            <img className="logoImage logoImage2" src={logoImage2} alt="" />
+          </div>
+        </Link>
 
         <div className="headinputimagediv">
           <input

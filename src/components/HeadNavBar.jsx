@@ -34,12 +34,11 @@ export function HeadNavBar({ productdetails, itemOnSearch, setItemOnSearch }) {
   return (
     <>
       <div className="headnavbar">
-        <Link onClick={emptySearchItems}>
-          <div className="logoImagediv">
-            <img className="logoImage" src={logoImage} alt="" />
-            <img className="logoImage logoImage2" src={logoImage2} alt="" />
-          </div>
-        </Link>
+        <div className="logoImagediv" onClick={emptySearchItems}>
+          <img className="logoImage" src={logoImage} alt="" />
+          <img className="logoImage logoImage2" src={logoImage2} alt="" />
+        </div>
+
         <div className="headinputimagediv">
           <input
             ref={searchInputValue}

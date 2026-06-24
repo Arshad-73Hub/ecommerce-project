@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, NavLink } from "react-router-dom";
 import { useRef } from "react";
 import logoImage from "../assets/logo-white.svg";
 import logoImage2 from "../assets/mobile-logo-white.svg";
@@ -53,17 +53,23 @@ export function HeadNavBar({ productdetails, itemOnSearch, setItemOnSearch }) {
           </div>
         </div>
         <div className="ordercartsdiv">
-          <Link to="/OrderSection">
+          <NavLink
+            to="/OrderSection"
+            className={({ isActive }) => (isActive ? "activeLink" : "")}
+          >
             <div className="ordersdiv">
               <p>Orders</p>
             </div>
-          </Link>
-          <Link to="/CartSection">
+          </NavLink>
+          <NavLink
+            to="/CartSection"
+            className={({ isActive }) => (isActive ? "activeLink" : "")}
+          >
             <div className="cartimagediv">
               <img className="cartImage" src={cartImage} alt="cart" />
               <p>Cart</p>
             </div>
-          </Link>
+          </NavLink>
         </div>
       </div>
     </>

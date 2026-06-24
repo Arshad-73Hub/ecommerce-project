@@ -1,0 +1,123 @@
+.trackingsectionsmainsectiondiv{
+    max-width: 850px;
+    margin-top: 90px;
+    margin-bottom: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.trackingsectionproducttrackingdetailsdiv{
+    display: flex;
+    flex-direction: column;
+}
+.trackingsectionviewallorderlinkdiv{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    margin-bottom: 30px;
+}
+.trackingsectionviewallorderlinkdiv a{
+    color:rgb(25,135,84);
+    cursor: pointer;
+}
+.trackingsectionviewallorderlinkdiv a:hover{
+    opacity: 0.75;
+}
+.trackingsectionarrivingdatediv{
+    display: flex;
+    align-items: start;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.trackingsectionproductnamediv{
+    display: flex;
+    margin-bottom: 3px;
+}
+.trackingsectionproductquantitydiv{
+display: flex;
+margin-bottom: 3px;
+}
+.trackingsectionimage{
+max-width:150px ;
+max-height:150px ;
+margin-top: 25px;
+margin-bottom: 50px;
+}
+.trackingsectionproductjourneydiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.trackingsectionproductatpreparingdiv{
+    color:rgb(25,135,84);
+}
+.trackingsectionslidermovediv{
+    height:25px;
+    width:100%;
+    border:1px solid rgb(200,200,200);
+    border-radius: 50px;
+}
+.trackingsectionsliderinsidecolordiv{
+    height:100%;
+    width:7%;
+    background-color: rgb(25,135,84);
+    border-radius: 50px;
+    animation: anime1 1s ease;
+}
+@keyframes anime1 {
+    from {
+        width:0%;
+
+    }
+    to{
+        width:5%;
+    }
+}
+
+
+
+@media screen and (max-width:575px){
+    .trackingsectionproductjourneydiv{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:450px){
+    .trackingsectionproductjourneydiv{
+        align-items: start;
+        flex-direction: column;
+        margin-bottom: 5px;
+    }
+    .trackingsectionproductjourneysamecss{
+        margin-bottom: 3px;
+    }
+    .trackingsectionsliderinsidecolordiv{
+        display: block;;
+    }
+    .trackingsectionslidermovediv{
+        display: block;
+    }
+}
+@media screen and (max-width:387px){
+    .trackingsectionsliderinsidecolordiv{
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+}
+@media screen and (max-width:300px){
+    .trackingsectionsliderinsidecolordiv{
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
+@media screen and (max-width:200px){
+    .trackingsectionsliderinsidecolordiv{
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+    }
+}

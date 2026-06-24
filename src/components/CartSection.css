@@ -1,0 +1,315 @@
+/* css added later for updating quantity of item */
+.cartsectiontoupdatequantityofitem{
+        width: 50px;
+    font-size: 16px;
+    padding:1px 2px;
+ 
+}
+
+.cartsectiontoupdatequantityofitemspan{
+    display: none;
+}
+.cartsectionitemquantitysavebutton{
+ margin-left: 5px;
+        color: rgb(25, 135, 84);
+        cursor: pointer;
+}
+.cartsectionitemquantitysavebutton:hover{
+    opacity: 0.75;
+}
+.cartsectiontoupdatequantityofitem:focus{
+    outline: 2px solid rgb(25, 135, 84);
+}
+
+
+
+
+
+.cartsectionmobilelogoimage{
+    display: none;
+    height:26px;
+}
+
+.cartsectiontotalproductsaddedtocartdiv{
+   border: 1px solid rgb(222, 222, 222);
+    border-radius: 5px;
+    padding: 18px;
+    margin-bottom: 12px;
+}
+.cartsectionheaderwrapper{
+    height:60px;
+    padding-left:30px ;
+    padding-right:30px ;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    position:fixed;
+    top:0px;
+    left:0px;
+    right:0px;
+    z-index:1000;
+}
+.cartsectionheaderdiv{
+    width:100%;
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+}
+.cartsectionlogoimagediv{
+    width:200px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.cartsectiondollarimagediv{
+width:200px;
+justify-content: end;
+align-items: center;
+text-align: right;
+}
+.cartsectioncheckouttextdiv{
+    display: flex;
+    flex:1 0;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 500;
+}
+.cartsectionchecout3item{
+    color: rgb(25, 135, 84);
+    text-decoration: none;
+    cursor: pointer
+}
+.cartsectionlogoimage{
+    height:26px;
+}
+.cartsectiondollarimage{
+    height:32px;
+}
+.cartsectionsmainsection{
+       max-width: 1100px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 140px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.cartsectionreviewordertext{
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+.cartsectiondeliverydetails{
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    column-gap: 20px;
+    align-items: start;
+}
+.cartsectiondeliverydatediv{
+    font-size: 19px;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 22px;
+    color: rgb(25, 135, 84);
+}
+.cartsectionproductdetailsanddeliverydatediv{
+    margin-bottom: 12px;
+}
+.cartsectionproductdetailsdiv{
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr;
+    column-gap: 25px;
+}
+.cartsectionsocksitemimage{
+    max-width: 100px;
+    max-height: 100px;
+}
+.cartsectionproductnamepricequantitydiv
+{
+    display: flex;
+    flex-direction: column;
+}
+.cartsectionproductnamediv{
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+.cartsectionproductpricediv{
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.cartsectionupdatedelete{
+    margin-left: 5px;
+        color: rgb(25, 135, 84);
+        cursor: pointer;
+}
+.cartsectionupdatedelete:hover{
+    opacity:0.75;
+}
+.cartsectionchooseadeliveryoptiondateshippingdiv{
+    display: flex;
+    flex-direction: column;
+}
+.cartsectionchooseadelvieryoptiondiv{
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.cartsectiondeliveryoptionradiodiv{
+ display: grid;
+ grid-template-columns: 24px 1fr;
+ margin-bottom: 12px;
+ cursor: pointer;
+}
+.cartsectionradiobutton
+{
+    margin-right: 5px;
+    margin-left: 0px;
+    cursor: pointer;
+}
+.cartsectiondeliverydateshippingcostdiv{
+    display: flex;
+    flex-direction: column;
+}
+.cartsectiondeliveryoptionradiodiv:hover{
+    opacity: 0.75;
+}
+.cartsectiondeliverydateradiodiv{
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+.cartsectionfreeshippingdiv{
+color: rgb(120, 120, 120);
+    font-size: 15px;
+}
+
+
+.cartsectionpaymentsummarydiv{
+    border: 1px solid rgb(222, 222, 222);
+    border-radius: 5px;
+    padding: 18px;
+    padding-bottom: 5px;
+}
+.cartsectionpaymentsummarytextdiv{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.cartsectionpaymentsummarysamefeatureofgrid{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    font-size: 15px;
+    margin-bottom: 9px;
+}
+.cartsectiontotaltaxpricesamefeature{
+    padding-top: 9px;
+}
+.cartsectiontotalpricebeforetaxdiv{
+    border-top: 1px solid rgb(222, 222, 222);
+}
+.cartsectionordertotalaftertaxpricediv{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    color: rgb(25, 135, 84);
+    font-weight: 700;
+    font-size: 18px;
+    border-top: 1px solid rgb(222, 222, 222);
+    padding-top: 18px;
+    margin-bottom: 9px;
+}
+.cartsectionpaymentsummarybutton{
+
+     width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-top: 20px;
+    margin-bottom: 19px;
+     color: white;
+    background-color: rgb(25, 135, 84);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgb(220, 220, 220);
+    font-size: 14px;
+}
+.cartsectionpaymentsummarybutton:hover{
+    background-color: rgba(25,135,84,0.75);
+}
+.cartsectionpaymentbuttondisable{
+    opacity: 0.5;
+    pointer-events: none;
+       width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-top: 20px;
+    margin-bottom: 19px;
+     color: white;
+    background-color: rgb(25, 135, 84);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgb(220, 220, 220);
+    font-size: 14px;
+}
+
+
+
+
+@media screen and (max-width:1000px)
+{
+    .cartsectioncheckouttextdiv{
+        margin-right: 60px;
+        font-size: 20px;
+    }
+    .cartsectiondollarimagediv{
+        width:auto;
+    }
+    .cartsectionsmainsection{
+        max-width: 500px;
+    }
+    .cartsectiondeliverydetails{
+        grid-template-columns: 1fr;
+    }
+    .cartsectionpaymentsummarydiv{
+        grid-row-start:1;
+        grid-row-end: 1 ;
+        margin-bottom: 12px;
+    }
+    .cartsectionproductdetailsdiv{
+        grid-template-columns: 100px 1fr;
+        row-gap: 30px;
+    }
+    .cartsectionchooseadeliveryoptiondateshippingdiv{
+        grid-column-start:1;
+        grid-column-end:span 2;
+    }
+
+}
+@media screen and (max-width:575px){
+    .cartsectionlogoimage{
+        display: none;
+    }
+    .cartsectioncheckouttextdiv{
+        font-size: 20px;
+        margin-right: 5px;
+    }
+    .cartsectiondollarimagediv{
+        width:auto;
+    }
+    .cartsectionmobilelogoimage{
+        display: flex;
+    }
+    .cartsectionlogoimagediv
+    {
+        width:auto;
+    }
+}
+@media screen and (max-width:421px){
+    .cartsectionquantitynumber{
+        display: inline-block;
+        min-width:20px;
+    }
+    .cartsectionupdatedelete{
+        display: inline-block;
+        margin-left: 0px;
+        margin-right: 7px;
+        margin-top: 5px;
+    }
+}

@@ -1,0 +1,143 @@
+
+.headnavbar{
+    background-color: rgb(8, 79, 45);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top:0px;
+    left: 0px;
+    right: 0px;
+    height:60px;
+    padding:0px 15px 0px 15px;
+}
+@media screen and (width>=670px) {
+    .logoImage{
+    display: flex;
+}
+.logoImage2{
+    display: none;
+}
+}
+.logoImagediv{
+    display: inline-block;
+    padding:6px 9.5px;
+    border-radius: 2px;
+    cursor: pointer;
+    border:1px solid rgba(0, 0, 0, 0);
+    
+}
+.logoImagediv:hover{
+    border:1px solid white;
+}
+ .logoImage{
+    max-height:26px;
+    margin-top: 1px;
+}
+@media screen and (width<=670px) {
+    .logoImage{
+    display: none;
+}
+.logoImage2{
+    display: flex;
+}
+}
+.cartImage{
+    width:30px;
+    margin-right: 5px;
+}
+  .headinputimagediv{
+    max-width: 850px;
+    margin:0px 10px 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex:1;
+    border-radius: 5px;
+  }
+.navbar-input{
+    padding-left: 15px;
+    height:38px;
+    width:0;
+    border:none;
+    outline:none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: flex;
+    flex: 1;
+    font-size: 16px;
+}
+.navbar-search-button{
+    background-color: rgb(186, 255, 190);
+    width:45px;
+    height:40px;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.navbar-arrow-icon{
+    height:20px;
+}
+.navbar-search-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+@media screen and (width<=420px)
+{
+    .ordercartsdiv{
+        width:160px;
+        display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding:2px 3.5px;
+    }
+}
+
+@media screen and (width>=420px){
+    .ordercartsdiv{
+    width:180px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding:6px 9.5px;
+}
+}
+.ordersdiv{
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 2px;
+cursor: pointer;
+padding:0px 13px;
+border:1px solid rgba(0,0,0,0);
+}
+.ordersdiv:hover{
+    border:1px solid white;
+}
+.ordersdiv p{
+    font-size: 15px;
+    font-weight: 700;
+    color:white;
+}
+.cartImage{
+    height:38px;
+}
+.cartimagediv{
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+    cursor: pointer;
+    padding:0px 9.5px;
+    border:1px solid rgba(0,0,0,0);
+}
+.cartimagediv:hover{
+    border: 1px solid white;
+}
+.cartimagediv p{
+    font-size: 15px;
+    font-weight: 700;
+    color:white;
+}

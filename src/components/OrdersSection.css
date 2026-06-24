@@ -1,0 +1,297 @@
+
+
+.OrderSectioncheckmarkimage{
+    height:26px;
+    margin-right: 6px;
+}
+.OrderSectioncheckmarkaddedimage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    display: none;
+}
+
+.Placedordercartswrapper{
+    border-bottom: 1px solid rgb(222, 222, 222);
+    border-left: 1px solid rgb(222, 222, 222);
+    border-right: 1px solid rgb(222, 222, 222);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    margin-bottom: 50px;
+}
+.orderswrapperdiv{
+display: flex;
+justify-content: center;
+}
+.mainsectionoforders{
+    margin-top: 90px;
+    max-width: 850px;
+    flex-direction: column;
+    flex:1 1;
+    /* box-sizing: border-box; */
+}
+.yourordertextdiv{
+    font-weight: 700;
+    font-size: 26px;
+    margin-bottom: 25px;
+    display: flex;
+    flex:1 1;
+}
+.placedorderscarts{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+.orderplacedtotaliddiv{
+    border: 1px solid rgb(222, 222, 222);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 25px;
+    column-gap: 40px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+.orderplacedandtotaldiv{
+    display:flex;
+}
+.orderplacedtotaldiv{
+    margin-right: 45px;
+}
+/* .placedordercontainerdiv{
+    display: flex;
+    flex-direction: column;
+   
+} */
+.placedorder1div{
+    display: grid;
+    grid-template-columns: 110px 1fr 220px;
+    column-gap: 35px;
+    row-gap: 60px;
+     padding: 40px 25px;
+     /* border: 1px solid rgb(222, 222, 222);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; */
+}
+.socksImage{
+    max-width: 110px;
+    max-height: 110px;
+}
+.ordersectionproductnamearrivingquantityaddtocartdiv{
+    display: flex;
+    flex-direction: column;
+    flex:1 1;
+}
+.ordernamediv{
+    margin-bottom: 5px;
+}
+.orderplacedtextdiv{
+    font-weight: 700;
+}
+.orderarrivingdatediv{
+    margin-bottom: 3px;
+}
+.orderquantitydiv{
+    margin-bottom: 8px;
+}
+.ordersectionaddbutton{
+    width: 140px;
+    height: 36px;
+    background-color: rgb(25, 135, 84);
+    color:white;
+    border:1px solid transparent;
+    box-shadow: 0 2px 5px rgb(220, 220, 220);
+    padding:8px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ordersectionaddbutton:hover{
+    background-color: rgba(25,135,84,0.75);
+}
+.ordersectionbuttoncartimage{
+    width:20px;
+    margin-right: 10px;
+}
+.ordersectionbuttontext{
+    font-size: 14px;
+}
+.ordersectiontrackingbuttondiv{
+    width:100%;
+    display: flex;
+    align-items: start;
+    text-decoration: none;
+}
+.Trackbuttonlinkdiv{
+    width:100%;
+}
+.ordersectiontrackingbutton{
+    width:100%;
+    font-size: 14px;
+    padding:8px;
+    color: rgb(33, 33, 33);
+    background: white;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(220, 220, 220, 0.2);
+    text-decoration: none;
+}
+.ordersectiontrackingbutton:hover{
+    background-color: rgb(248, 247, 247);
+}
+.Trackbuttonlinkdiv{
+    text-decoration: none;
+}
+
+
+@media screen and (max-width:900px)
+{
+  
+     .mainsectionoforders{
+        padding:0px 20px 0px 20px;
+    }
+    .placedorder1div{
+        padding:40px 25px 40px 25px;
+    }
+}
+@media screen and (max-width:800px)
+{
+    .ordersectionimageaddtocartdiv
+    {
+        margin-bottom: 10px;
+    }
+  .placedorder1div{
+        padding-bottom: 8px;
+    }
+    .ordersectiontrackingbuttondiv{
+        margin-bottom: 30px;
+    }
+    .placedorder1div{
+        grid-template-columns: 110px 1fr;
+        row-gap: 0px;
+    }
+    .ordersectiontrackingbutton{
+        width:140px;
+    }
+    .ordersectiontrackingbuttondiv{
+        grid-column-start: 2;
+        grid-column-end: 2;
+        margin-bottom: 30px;
+    }
+      .mainsectionoforders{
+        padding:0px 20px 0px 20px;
+    }
+}
+
+@media screen and (max-width:630px){
+    .ordersectionorderplaceddiv{
+        min-width: 105px;
+    }
+}
+
+@media screen and (max-width:575px){
+
+    .ordersectionorderplaceddiv{
+        min-width: none;
+    }
+   .placedorder1div{
+        padding-bottom:8px;
+    }
+    .ordersectiontrackingbuttondiv{
+        margin-bottom: 30px;
+    }
+    .orderplacedtotaliddiv{
+        flex-direction: column;
+        align-items: start;
+        padding:15px;
+        line-height: 23px;
+    }
+    .ordersectionimageaddtocartdiv{
+        margin-bottom: 10px;
+    }
+    .orderplacedandtotaldiv{
+        flex-direction: column;
+        align-items: start;
+    }
+    .orderplacedtotaldiv{
+        display: flex;
+    }
+    .totalvalueoforderdiv{
+        display: flex;
+    }
+    .orderiddiv{
+        display: flex;
+    }
+    .orderplacedtextdiv{
+        margin-right: 5px;
+    }
+    .mainsectionoforders{
+        padding:0px 9px 0px 9px;
+    }
+}
+@media screen and (max-width:450px){
+    .placedorder1div{
+        grid-template-columns: 1fr;
+    } 
+     .placedorder1div{
+        padding-bottom: 8px;
+    }
+    /* .ordersectionsocksimagediv{
+        height:150px;
+        width:150px;
+    }*/
+    /* .socksImage{
+        max-width:100%;
+        max-height:100%;
+    }  */
+      .ordersectionorderiddiv{
+        min-width:70px;
+        height:46px;
+      }
+    .ordernamediv{
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+    .orderquantitydiv{
+        margin-bottom:15px;
+    }
+   .ordersectionsocksimagediv{
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .socksImage{
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    /* .ordersectionproductnamearrivingquantityaddtocartdiv{
+        width:100%;
+    } */
+   
+   
+   
+    .ordersectionaddbutton{
+        width:100%;
+    }
+    .ordersectiontrackingbuttondiv
+    {
+        grid-column: auto;
+        grid-row: auto;
+        width:100%;
+        margin-bottom: 0;
+    }
+    .ordersectiontrackingbutton{
+        width:100%;
+    }
+    .ordersectiontrackingbuttondiv{
+        margin-bottom: 70px;
+    }
+    .mainsectionoforders{
+        padding:0px 20px 0px 20px;
+    }
+}

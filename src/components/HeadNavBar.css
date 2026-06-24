@@ -99,9 +99,7 @@
     align-items: center;
     padding:2px 3.5px;
     }
-    .navbar-input{
-        height:36px;
-    }
+   
 }
 
 @media screen and (width>=420px){

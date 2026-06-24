@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { useRef } from "react";
 import dayjs from "dayjs";
 import cartImage from "../assets/font-awesome-cart-white.svg";

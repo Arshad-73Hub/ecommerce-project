@@ -14,6 +14,10 @@ export function CartSectionPaymentSummary({
     (sum, num) => sum + Number(num.productprice * num.itemQuantity),
     0,
   );
+  const totalItems = itemToAdd.reduce(
+    (sum, num) => sum + Number(num.itemQuantity),
+    0,
+  );
   const totalordervalue = totalvalueoforder;
   const ShippingCost = totalShippingCost;
   const totaltaxbeforevalue = totalordervalue + ShippingCost;
@@ -32,7 +36,7 @@ export function CartSectionPaymentSummary({
       <div className="cartsectionpaymentsummarydiv">
         <div className="cartsectionpaymentsummarytextdiv">Payment Summary</div>
         <div className="cartsectionpaymentsummarysamefeatureofgrid ordersectiontotalitempricediv">
-          <div>Items ({itemToAdd.length}):</div>
+          <div>Items {totalItems}:</div>
           <div>${totalordervalue.toFixed(2)}</div>
         </div>
         <div className="cartsectionpaymentsummarysamefeatureofgrid">

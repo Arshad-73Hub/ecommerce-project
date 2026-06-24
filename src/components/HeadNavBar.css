@@ -1,5 +1,5 @@
 
-.activeLink {
+.activeLink p{
   text-decoration: underline;
 }
 
@@ -55,7 +55,7 @@
     max-width: 850px;
     margin:0px 10px 0px 10px;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     flex:1;
     border-radius: 5px;
@@ -73,6 +73,9 @@
     font-size: 16px;
 }
 .navbar-search-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(186, 255, 190);
     width:45px;
     height:40px;

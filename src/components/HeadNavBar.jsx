@@ -26,6 +26,7 @@ export function HeadNavBar({ productdetails, itemOnSearch, setItemOnSearch }) {
 
   function emptySearchItems() {
     searchInputValue.current.value = "";
+    setItemOnSearch([]);
   }
 
   return (

@@ -34,7 +34,7 @@ export function HeadNavBar({ productdetails, itemOnSearch, setItemOnSearch }) {
   return (
     <>
       <div className="headnavbar">
-        <Link to="/" onClick={emptySearchItems}>
+        <Link onClick={emptySearchItems}>
           <div className="logoImagediv">
             <img className="logoImage" src={logoImage} alt="" />
             <img className="logoImage logoImage2" src={logoImage2} alt="" />

@@ -22,10 +22,10 @@ export function HomePage({
         setItemOnSearch={setItemOnSearch}
       />
       <div className="mainsection maincontainer">
-        {itemOnSearch.length == 0
-          ? productdetails.map((productitem) => (
+        {itemOnSearch.length > 0
+          ? itemOnSearch.map((productitem, index) => (
               <ProductCarts
-                orderPlacedDate={orderPlacedDate}
+                key={index}
                 imageurl={productitem.imageurl}
                 productname={productitem.productname}
                 price={productitem.price}
@@ -33,8 +33,10 @@ export function HomePage({
                 setItemsToAdd={setItemsToAdd}
               />
             ))
-          : itemOnSearch.map((productitem) => (
+          : productdetails.map((productitem, index) => (
               <ProductCarts
+                key={index}
+                orderPlacedDate={orderPlacedDate}
                 imageurl={productitem.imageurl}
                 productname={productitem.productname}
                 price={productitem.price}

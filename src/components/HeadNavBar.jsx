@@ -18,9 +18,7 @@ export function HeadNavBar({ productdetails, itemOnSearch, setItemOnSearch }) {
 
     setItemOnSearch(
       productdetails.filter((item) =>
-        item.productname
-          .toLowerCase()
-          .includes(searchInputValue.current.value.toLowerCase()),
+        item.productname.toLowerCase().includes(value),
       ),
     );
   }

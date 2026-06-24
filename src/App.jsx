@@ -2,7 +2,7 @@ import { useState } from "react";
 import dayjs from "dayjs";
 
 import { HomePage } from "./HomePage";
-import { Routes, Route } from "react-router";
+import { Routes, Route } from "react-router-dom";
 import { OrdersSection } from "./components/OrdersSectionpage";
 import { CartSectionsMainSection } from "./components/CartSectionsMainSectionpage";
 import { TrackingSection } from "./components/TrackingSectionpage";

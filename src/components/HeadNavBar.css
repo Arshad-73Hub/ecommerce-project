@@ -89,7 +89,7 @@
 }
 .navbar-search-button{
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     cursor: pointer;
 }

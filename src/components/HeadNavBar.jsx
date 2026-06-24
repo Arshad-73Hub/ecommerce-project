@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import logoImage from "../assets/logo-white.svg";
 import logoImage2 from "../assets/mobile-logo-white.svg";
@@ -7,6 +7,7 @@ import rightArrow from "../assets/font-awesome-right-arrow.svg";
 import "./HeadNavBar.css";
 
 export function HeadNavBar({ productdetails, itemOnSearch, setItemOnSearch }) {
+  const navigate = useNavigate();
   const searchInputValue = useRef(null);
   // function addItemToItemOnSearch(value) {}
   function addItemsonSearch() {
@@ -27,6 +28,7 @@ export function HeadNavBar({ productdetails, itemOnSearch, setItemOnSearch }) {
   function emptySearchItems() {
     searchInputValue.current.value = "";
     setItemOnSearch([]);
+    navigate("/");
   }
 
   return (

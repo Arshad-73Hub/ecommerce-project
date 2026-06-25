@@ -25,6 +25,8 @@ export function OrdersSection({
           <div className="yourordertextdiv">Your Orders</div>
           {orderItemsToAdd.map((items) => (
             <OrderSectionOrders
+              key={items.id}
+              id={items.id}
               itemToAdd={itemToAdd}
               setItemsToAdd={setItemsToAdd}
               itemsimageurl={items.imageurl}

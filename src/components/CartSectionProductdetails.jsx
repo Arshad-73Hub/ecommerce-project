@@ -4,7 +4,7 @@ import "./CartSection.css";
 
 export function CartSectionAddedProducts({
   setItemsToAdd,
-  index,
+  selectedOption: initialOption,
   totalShippingCost,
   setTotalShippingCost,
   id,
@@ -17,12 +17,12 @@ export function CartSectionAddedProducts({
   itemsproductprice,
   itemsproductquantity,
 }) {
+  const [selectedOption, setSelectedOption] = useState(initialOption || "free");
   const [deliveryDate, setDeliveryDate] = useState(
     dayjs().add(11, "day").format("dddd, MMMM D"),
   );
-
-  const updateButton = useRef(null);
-  const inputSaveSpan = useRef(null);
+  const [isEditing, setIsEditing] = useState(false);
+  const [quantity, setQuantity] = useState(itemsproductquantity);
   const inputValue = useRef(null);
 
   const [shippingCharge, setShippingCharge] = useState(0);
@@ -36,11 +36,13 @@ export function CartSectionAddedProducts({
     setTotalShippingCost((prev) => {
       return prev - shippingCharge + cost;
     });
+    setSelectedOption("free");
     setItemsToAdd((prev) => {
-      return prev.map((item, i) =>
-        index === i
+      return prev.map((item) =>
+        item.id === id
           ? {
               ...item,
+              selectedOption: "free",
               deliveryDate: freeDeliveryDate,
               shippingCost: cost,
             }
@@ -55,11 +57,13 @@ export function CartSectionAddedProducts({
     setTotalShippingCost((prev) => {
       return prev - shippingCharge + cost;
     });
+    setSelectedOption("fast");
     setItemsToAdd((prev) => {
-      return prev.map((item, i) =>
-        index === i
+      return prev.map((item) =>
+        item.id === id
           ? {
               ...item,
+              selectedOption: "fast",
               deliveryDate: fastDeliveryDate,
               shippingCost: cost,
             }
@@ -74,11 +78,13 @@ export function CartSectionAddedProducts({
     setTotalShippingCost((prev) => {
       return prev - shippingCharge + cost;
     });
+    setSelectedOption("express");
     setItemsToAdd((prev) => {
-      return prev.map((item, i) =>
-        index === i
+      return prev.map((item) =>
+        item.id === id
           ? {
               ...item,
+              selectedOption: "express",
               deliveryDate: expressDeliveryDate,
               shippingCost: cost,
             }
@@ -92,43 +98,38 @@ export function CartSectionAddedProducts({
     setTotalShippingCost((prev) => {
       return prev - shippingCharge;
     });
-    setItemsToAdd((prev) =>
-      prev.filter((item, i) => {
-        if (index != i) {
-          return item;
-        }
-      }),
-    );
+    setItemsToAdd((prev) => prev.filter((item) => item.id !== id));
   }
 
   function checkValueOfItemQuantity() {
-    if (inputValue.current.value == "") {
+    if (quantity == "") {
       alert("Quantity cannot be empty");
-      return;
-    }
-    if (Number(inputValue.current.value) < 0) {
-      alert("Enter a valid Quantity");
     } else {
-      if (Number(inputValue.current.value) === 0) {
-        setItemsToAdd((prev) => prev.filter((item, i) => i !== index));
+      if (Number(quantity) < 0) {
+        alert("Enter a valid Quantity");
+      } else {
+        if (Number(quantity) === 0) {
+          setItemsToAdd((prev) => prev.filter((item) => item.id !== id));
+          setTotalShippingCost((prev) => {
+            return prev - shippingCharge;
+          });
+        }
+        if (Number(quantity) > 0) {
+          setItemsToAdd((prev) =>
+            prev.map((item) =>
+              item.id == id
+                ? { ...item, itemQuantity: Number(quantity) }
+                : item,
+            ),
+          );
+        }
+
+        setIsEditing(false);
       }
-      if (Number(inputValue.current.value) > 0) {
-        setItemsToAdd((prev) =>
-          prev.map((item, i) =>
-            index == i
-              ? { ...item, itemQuantity: inputValue.current.value }
-              : item,
-          ),
-        );
-      }
-      updateButton.current.style.display = "inline-block";
-      inputSaveSpan.current.style.display = "none";
     }
   }
-
-  function updateItemQuantity() {
-    updateButton.current.style.display = "none";
-    inputSaveSpan.current.style.display = "inline-block";
+  function updateInputValue(value) {
+    setQuantity(value);
   }
 
   return (
@@ -153,29 +154,35 @@ export function CartSectionAddedProducts({
               <span className="cartsectionquantitynumber">
                 {itemsproductquantity}
               </span>
-              <span
-                ref={inputSaveSpan}
-                className="cartsectiontoupdatequantityofitemspan"
-              >
-                <input
-                  ref={inputValue}
-                  className="cartsectiontoupdatequantityofitem"
-                  min="1"
-                  type="number"
-                />{" "}
-                <span
-                  onClick={checkValueOfItemQuantity}
-                  className="cartsectionitemquantitysavebutton"
-                >
-                  Save
-                </span>
-              </span>
-              <span
-                ref={updateButton}
-                onClick={updateItemQuantity}
-                className="cartsectionupdatefetaure cartsectionupdatedelete"
-              >
-                Update
+              <span className="cartsectiontoupdatequantityofitemspan">
+                {isEditing == true && (
+                  <input
+                    value={quantity}
+                    onChange={(event) => {
+                      updateInputValue(event.target.value);
+                    }}
+                    className="cartsectiontoupdatequantityofitem"
+                    min="1"
+                    type="number"
+                  />
+                )}
+                {isEditing ? (
+                  <span
+                    onClick={checkValueOfItemQuantity}
+                    className="cartsectionitemquantitysavebutton"
+                  >
+                    Save
+                  </span>
+                ) : (
+                  <span
+                    onClick={() => {
+                      setIsEditing(true);
+                    }}
+                    className="cartsectionupdatefetaure cartsectionupdatedelete"
+                  >
+                    Update
+                  </span>
+                )}
               </span>
               <span
                 onClick={deleteParticularItemFromCart}
@@ -193,11 +200,12 @@ export function CartSectionAddedProducts({
 
             <div className="cartsectiondeliveryoptionradiodiv">
               <input
+                value="free"
                 onChange={setFreeShippingCharge}
                 className="cartsectionradiobutton"
                 type="radio"
-                defaultChecked
-                name={id}
+                checked={selectedOption === "free"}
+                name={`delivery-${id}`}
               />
               <div className="cartsectiondeliverydateshippingcostdiv">
                 <div className="cartsectiondeliverydateradiodiv">
@@ -209,10 +217,12 @@ export function CartSectionAddedProducts({
 
             <div className="cartsectiondeliveryoptionradiodiv">
               <input
+                value="fast"
                 onChange={setFastShippingCharge}
+                checked={selectedOption === "fast"}
                 className="cartsectionradiobutton"
                 type="radio"
-                name={id}
+                name={`delivery-${id}`}
               />
               <div className="cartsectiondeliverydateshippingcostdiv">
                 <div className="cartsectiondeliverydateradiodiv">
@@ -226,10 +236,12 @@ export function CartSectionAddedProducts({
 
             <div className="cartsectiondeliveryoptionradiodiv">
               <input
+                value="express"
                 onChange={setExpressShippingCharge}
+                checked={selectedOption === "express"}
                 className="cartsectionradiobutton"
                 type="radio"
-                name={id}
+                name={`delivery-${id}`}
               />
               <div className="cartsectiondeliverydateshippingcostdiv">
                 <div className="cartsectiondeliverydateradiodiv">

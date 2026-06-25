@@ -7,12 +7,13 @@
 }
 
 .cartsectiontoupdatequantityofitemspan{
-    display: none;
+
 }
 .cartsectionitemquantitysavebutton{
  margin-left: 5px;
         color: rgb(25, 135, 84);
         cursor: pointer;
+        margin-right: 5px;
 }
 .cartsectionitemquantitysavebutton:hover{
     opacity: 0.75;
@@ -145,6 +146,7 @@ text-align: right;
 .cartsectionupdatedelete:hover{
     opacity:0.75;
 }
+
 .cartsectionchooseadeliveryoptiondateshippingdiv{
     display: flex;
     flex-direction: column;

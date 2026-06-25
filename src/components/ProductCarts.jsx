@@ -8,6 +8,9 @@ import "../HomePage.css";
 import "../App.css";
 
 export function ProductCarts({
+  starImage,
+  rating,
+  id,
   orderPlacedDate,
   imageurl,
   productname,
@@ -33,8 +36,10 @@ export function ProductCarts({
       shippingCost: 0,
       deliveryDate: deliveryDate,
       orderPlacedDate: orderPlacedDate,
+      selectedOption: "free",
+      id: id,
     };
-    setItemsToAdd([...itemToAdd, newobj]);
+    setItemsToAdd((prev) => [...prev, newobj]);
   }
 
   function handleQuantityofitemsinHomePage(value) {
@@ -50,13 +55,9 @@ export function ProductCarts({
         <div className="product-namediv product-namedivprop">{productname}</div>
         <div className="product-ratingdiv">
           <div className="product-ratingimagediv">
-            <img
-              className="product-ratingimage"
-              src={ratingsImage}
-              alt="stars"
-            />
+            <img className="product-ratingimage" src={starImage} alt="stars" />
           </div>
-          <div className="product-ratingtext">87</div>
+          <div className="product-ratingtext">{rating}</div>
         </div>
         <div className="product-pricediv">${price}</div>
         <div className="carts-quantitydiv">

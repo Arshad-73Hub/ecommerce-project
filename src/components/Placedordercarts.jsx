@@ -7,6 +7,7 @@ import "./OrdersSection.css";
 import "../App.css";
 
 export function Placedordercarts({
+  id,
   itemsOrderPlacedDate,
   itemsDeliveryDate,
   itemToAdd,
@@ -41,6 +42,8 @@ export function Placedordercarts({
       deliveryDate: deliveryDate,
       shippingCost: 0,
       orderPlacedDate: itemsOrderPlacedDate,
+      selectedOption: "free",
+      id: id,
     };
     setItemsToAdd([...itemToAdd, tempobj]);
     getaddtocartelementdiv.current.style.display = "none";

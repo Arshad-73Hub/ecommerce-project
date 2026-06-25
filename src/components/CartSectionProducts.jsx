@@ -15,10 +15,11 @@ export function CartSectionProducts({
   return (
     <>
       <div className="cartsectionproductdetailsanddeliverydatediv">
-        {itemToAdd.map((items, index) => (
+        {itemToAdd.map((items) => (
           <CartSectionAddedProducts
-            id={crypto.randomUUID()}
-            index={index}
+            id={items.id}
+            key={items.id}
+            selectedOption={items.selectedOption}
             setItemsToAdd={setItemsToAdd}
             totalShippingCost={totalShippingCost}
             setTotalShippingCost={setTotalShippingCost}

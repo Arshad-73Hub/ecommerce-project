@@ -23,25 +23,31 @@ export function HomePage({
       />
       <div className="mainsection maincontainer">
         {itemOnSearch.length > 0
-          ? itemOnSearch.map((productitem, index) => (
+          ? itemOnSearch.map((productitem) => (
               <ProductCarts
-                key={index}
+                key={productitem.id}
+                id={productitem.id}
                 imageurl={productitem.imageurl}
                 productname={productitem.productname}
                 price={productitem.price}
                 itemToAdd={itemToAdd}
                 setItemsToAdd={setItemsToAdd}
+                starImage={productitem.starImage}
+                rating={productitem.rating}
               />
             ))
-          : productdetails.map((productitem, index) => (
+          : productdetails.map((productitem) => (
               <ProductCarts
-                key={index}
+                key={productitem.id}
+                id={productitem.id}
                 orderPlacedDate={orderPlacedDate}
                 imageurl={productitem.imageurl}
                 productname={productitem.productname}
                 price={productitem.price}
                 itemToAdd={itemToAdd}
                 setItemsToAdd={setItemsToAdd}
+                starImage={productitem.starImage}
+                rating={productitem.rating}
               />
             ))}
       </div>

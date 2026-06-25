@@ -5,6 +5,8 @@ import "../App.css";
 import dayjs from "dayjs";
 
 export function OrderSectionOrders({
+  key,
+  id,
   itemsOrderPlacedDate,
   itemsShippingCost,
   itemsDeliveryDate,
@@ -29,6 +31,7 @@ export function OrderSectionOrders({
         />
         <div className="Placedordercartswrapper">
           <Placedordercarts
+            id={id}
             itemsOrderPlacedDate={itemsOrderPlacedDate}
             itemsDeliveryDate={itemsDeliveryDate}
             itemToAdd={itemToAdd}

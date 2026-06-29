@@ -10,6 +10,7 @@ import { TrackingSection } from "./components/TrackingSectionpage";
 import rating4 from "./assets/rating-4.png";
 import rating45 from "./assets/rating-45.png";
 import rating5 from "./assets/rating-5.png";
+import rating35 from "./assets/rating-35.png";
 
 import socksImage from "./assets/athletic-cotton-socks-6-pairs.jpg";
 import tshirtImage from "./assets/adults-plain-cotton-tshirt-2-pack-teal.jpg";
@@ -28,6 +29,24 @@ import sunhatImage from "./assets/straw-sunhat.jpg";
 import athlecticsneakerwhiteImage from "./assets/men-athletic-shoes-white.jpg";
 import menswoolsweaterImage from "./assets/men-stretch-wool-sweater-black.jpg";
 import matImage from "./assets/bathroom-mat.jpg";
+import balletflats from "./assets/women-knit-ballet-flat-white.jpg";
+import poloshirt from "./assets/men-golf-polo-t-shirt-gray.jpg";
+import laundrydetergent from "./assets/laundry-detergent-tabs.jpg";
+import coverset from "./assets/duvet-cover-set-gray-queen.jpg";
+import menspaints from "./assets/men-chino-pants-beige.jpg";
+import navigaotsunglasses from "./assets/men-navigator-sunglasses-black.jpg";
+import brownflatshoes from "./assets/men-brown-flat-sneakers.jpg";
+import cookingset from "./assets/non-stick-cooking-set-4-pieces.jpg";
+import mirror from "./assets/vanity-mirror-pink.jpg";
+import glassjars from "./assets/glass-screw-lid-food-containers.jpg";
+import coffeemachine from "./assets/black-and-silver-espresso-maker.jpg";
+import blackcurtains from "./assets/blackout-curtains-set-teal.jpg";
+import bathtowels from "./assets/bath-towel-set-gray-rosewood.jpg";
+import sneakershoesgray from "./assets/athletic-skateboard-shoes-gray.jpg";
+import hoodie from "./assets/men-cozy-fleece-hoodie-light-teal.jpg";
+import bowlset from "./assets/artistic-bowl-set-6-piece.jpg";
+import kitchenpapertowels from "./assets/kitchen-paper-towels-8-pack.jpg";
+
 import "./App.css";
 import "./HomePage.css";
 
@@ -168,6 +187,142 @@ function App() {
       id: 17,
       starImage: rating45,
       rating: "119",
+    },
+    {
+      imageurl: balletflats,
+      productname: "Women's Ballet Flat - White",
+      price: "26.40",
+      id: 18,
+      starImage: rating4,
+      rating: "326",
+    },
+    {
+      imageurl: poloshirt,
+      productname: "Men's Golf Polo Shirt - Gray",
+      price: "15.99",
+      id: 19,
+      starImage: rating45,
+      rating: "2556",
+    },
+    {
+      imageurl: laundrydetergent,
+      productname: "Laundry Detergent Tabs, 50 Loads",
+      price: "28.99",
+      id: 20,
+      starImage: rating45,
+      rating: "305",
+    },
+    {
+      imageurl: coverset,
+      productname: "Duvet Cover Set, Diamond Pattern",
+      price: "43.99",
+      id: 21,
+      starImage: rating4,
+      rating: "456",
+    },
+    {
+      imageurl: menspaints,
+      productname: "Men's Chino Pants - Beige",
+      price: "22.90",
+      id: 22,
+      starImage: rating45,
+      rating: "9017",
+    },
+    {
+      imageurl: navigaotsunglasses,
+      productname: "Men's Navigator Sunglasses",
+      price: "36.90",
+      id: 23,
+      starImage: rating35,
+      rating: "42",
+    },
+    {
+      imageurl: brownflatshoes,
+      productname: "Men's Brown Flat Sneakers",
+      price: "24.99",
+      id: 24,
+      starImage: rating45,
+      rating: "562",
+    },
+    {
+      imageurl: cookingset,
+      productname: "Non-Stick Cook Set With Lids - 4 Pieces",
+      price: "67.97",
+      id: 25,
+      starImage: rating45,
+      rating: "511",
+    },
+    {
+      imageurl: mirror,
+      productname: "Vanity Mirror with LED Lights - Pink",
+      price: "25.49",
+      id: 26,
+      starImage: rating45,
+      rating: "130",
+    },
+    {
+      imageurl: glassjars,
+      productname: "Glass Screw Lid Containers - 3 Pieces",
+      price: "28.99",
+      id: 27,
+      starImage: rating4,
+      rating: "126",
+    },
+    {
+      imageurl: coffeemachine,
+      productname: "Black and Silver Espresso Maker",
+      price: "82.50",
+      id: 28,
+      starImage: rating45,
+      rating: "1211",
+    },
+    {
+      imageurl: blackcurtains,
+      productname: "Blackout Curtains Set 42 x 84-Inch - Teal",
+      price: "30.99",
+      id: 29,
+      starImage: rating45,
+      rating: "363",
+    },
+    {
+      imageurl: bathtowels,
+      productname: "Bath Towels 2 Pack - Gray, Rosewood",
+      price: "29.90",
+      id: 30,
+      starImage: rating45,
+      rating: "93",
+    },
+    {
+      imageurl: sneakershoesgray,
+      productname: "Athletic Skateboard Shoes - Gray",
+      price: "33.90",
+      id: 31,
+      starImage: rating4,
+      rating: "89",
+    },
+    {
+      imageurl: hoodie,
+      productname: "Men's Fleece Hoodie - Light Teal",
+      price: "38.00",
+      id: 32,
+      starImage: rating45,
+      rating: "3157",
+    },
+    {
+      imageurl: bowlset,
+      productname: "Artistic Bowl and Plate Set - 6 Pieces",
+      price: "38.99",
+      id: 33,
+      starImage: rating5,
+      rating: "679",
+    },
+    {
+      imageurl: kitchenpapertowels,
+      productname: "2-Ply Kitchen Paper Towels - 8 Pack",
+      price: "18.99",
+      id: 34,
+      starImage: rating45,
+      rating: "1045",
     },
   ]);
 

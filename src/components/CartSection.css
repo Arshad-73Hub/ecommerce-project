@@ -283,6 +283,11 @@ color: rgb(120, 120, 120);
         grid-column-end:span 2;
     }
 
+
+
+
+
+
 }
 @media screen and (max-width:575px){
     .cartsectionlogoimage{
@@ -315,3 +320,7 @@ color: rgb(120, 120, 120);
         margin-top: 5px;
     }
 }
+
+
+
+

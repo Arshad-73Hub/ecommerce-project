@@ -49,6 +49,9 @@ import kitchenpapertowels from "./assets/kitchen-paper-towels-8-pack.jpg";
 
 import "./App.css";
 import "./HomePage.css";
+import SignIn from "./components/LoginPage/SigninForm";
+import Signup from "./components/LoginPage/SignupForm";
+import Forgot from "./components/LoginPage/ForgotPage";
 
 function App() {
   const [productdetails, setproductdetails] = useState([
@@ -343,8 +346,12 @@ function App() {
   return (
     <>
       <Routes>
+        <Route path="/" element={<SignIn />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/forgot" element={<Forgot />} />
+
         <Route
-          path="/"
+          path="/home"
           element={
             <HomePage
               orderPlacedDate={orderPlacedDate}

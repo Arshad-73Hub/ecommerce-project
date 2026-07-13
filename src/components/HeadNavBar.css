@@ -106,6 +106,24 @@ a {
     align-items: center;
     padding:2px 3.5px;
     }
+    .logoutbutton{
+        border-radius: 3px;
+  padding: 0px 0px;
+  font-size: 7px;
+  font-weight: 400;
+  flex-shrink: 1;
+
+    }
+    .ordersdiv{
+        padding:0 0px;
+
+    }
+    .cartimagediv{
+        padding:0px 0px;
+    }
+    .logoImagediv{
+         padding:0px 0px;
+    }
    
 }
 
@@ -117,8 +135,11 @@ a {
     align-items: center;
     padding:6px 9.5px;
 }
+
+
 }
 .ordersdiv{
+    height:38px;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -153,4 +174,26 @@ border:1px solid rgba(0,0,0,0);
     font-size: 15px;
     font-weight: 700;
     color:white;
+}
+
+
+.logoutbutton {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.logoutbutton:hover {
+  background-color: #c62828;
+  transform: translateY(-1px);
+}
+
+.logoutbutton:active {
+  transform: scale(0.98);
 }

@@ -1,8 +1,9 @@
 import greenLogoImage from "../assets/mobile-logo.svg";
 import logoImage from "../assets/logo.svg";
 import dollarImage from "../assets/font-awesome-money-check.svg";
-import "./CartSection.css";
 import { Link } from "react-router-dom";
+
+import "./CartSection.css";
 
 export function CartSectionHeader({
   itemToAdd,
@@ -22,7 +23,7 @@ export function CartSectionHeader({
     <>
       <div className="cartsectionheaderwrapper">
         <div className="cartsectionheaderdiv">
-          <Link to="/" onClick={emptytItemOnSearch}>
+          <Link to="/home" onClick={emptytItemOnSearch}>
             <div className="cartsectionlogoimagediv">
               <img
                 src={logoImage}

@@ -1,5 +1,5 @@
-import { Link, useNavigate, NavLink } from "react-router-dom";
-import { useEffect, useRef } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { useRef } from "react";
 import logoImage from "../assets/logo-white.svg";
 import logoImage2 from "../assets/mobile-logo-white.svg";
 import cartImage from "../assets/font-awesome-cart-white.svg";
@@ -7,14 +7,6 @@ import rightArrow from "../assets/font-awesome-right-arrow.svg";
 import "./HeadNavBar.css";
 
 export function HeadNavBar({ productdetails, itemOnSearch, setItemOnSearch }) {
-  const navigate = useNavigate();
-  useEffect(() => {
-    const loggedInUser = localStorage.getItem("loggedInUser");
-
-    if (!loggedInUser) {
-      navigate("/");
-    }
-  }, []);
   const searchInputValue = useRef(null);
   // function addItemToItemOnSearch(value) {}
   function addItemsonSearch() {
@@ -33,11 +25,6 @@ export function HeadNavBar({ productdetails, itemOnSearch, setItemOnSearch }) {
   function emptySearchItems() {
     searchInputValue.current.value = "";
     setItemOnSearch([]);
-  }
-
-  function LogoutUser() {
-    localStorage.removeItem("loggedInUser");
-    navigate("/");
   }
 
   return (
@@ -82,10 +69,6 @@ export function HeadNavBar({ productdetails, itemOnSearch, setItemOnSearch }) {
               <p>Cart</p>
             </div>
           </NavLink>
-        </div>
-
-        <div className="logoutbutton" onClick={LogoutUser}>
-          Logout
         </div>
       </div>
     </>

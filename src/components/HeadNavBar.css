@@ -97,47 +97,32 @@ a {
     cursor: pointer;
 }
 
-@media screen and (width<=420px)
-{
-    .ordercartsdiv{
-        width:160px;
-        display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding:2px 3.5px;
-    }
-    .logoutbutton{
-        border-radius: 3px;
-  padding: 0px 0px;
-  font-size: 7px;
-  font-weight: 400;
-  flex-shrink: 1;
 
-    }
-    .ordersdiv{
-        padding:0 0px;
 
-    }
-    .cartimagediv{
-        padding:0px 0px;
-    }
-    .logoImagediv{
-         padding:0px 0px;
-    }
-   
+.logoutbutton {
+  background-color: #e53935;
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.2s ease;
 }
 
-@media screen and (width>=420px){
-    .ordercartsdiv{
-    width:180px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding:6px 9.5px;
+.logoutbutton:hover {
+  background-color: #c62828;
+  transform: translateY(-1px);
 }
 
-
+.logoutbutton:active {
+  transform: scale(0.98);
 }
+
 .ordersdiv{
     height:38px;
 display: flex;
@@ -177,23 +162,37 @@ border:1px solid rgba(0,0,0,0);
 }
 
 
-.logoutbutton {
-  background-color: #e53935;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 8px 10px;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.25s ease, transform 0.2s ease;
+
+
+
+
+@media screen and (width<=420px)
+{
+    .ordercartsdiv{
+        width:160px;
+        display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding:2px 3.5px;
+    }
+    .headnavbar{
+        padding:0px 8px 0px 8px;
+    }
+   .logoutbutton{
+    position:fixed;
+    right:10px;
+    bottom:10px;
+   }
 }
 
-.logoutbutton:hover {
-  background-color: #c62828;
-  transform: translateY(-1px);
+@media screen and (width>=420px){
+    .ordercartsdiv{
+    width:180px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding:6px 9.5px;
 }
 
-.logoutbutton:active {
-  transform: scale(0.98);
+
 }

@@ -41,3 +41,29 @@
     justify-content: center;
 }
 }
+
+
+
+.logoutbutton {
+  background-color: #e53935;
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.logoutbutton:hover {
+  background-color: #c62828;
+  transform: translateY(-1px);
+}
+
+.logoutbutton:active {
+  transform: scale(0.98);
+}

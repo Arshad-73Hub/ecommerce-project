@@ -3,6 +3,8 @@ import { ProductCarts } from "./components/ProductCarts";
 
 import "./App.css";
 import "./HomePage.css";
+import { useNavigate } from "react-router";
+import { useEffect } from "react";
 
 export function HomePage({
   orderPlacedDate,
@@ -13,6 +15,18 @@ export function HomePage({
   itemToAdd,
   setItemsToAdd,
 }) {
+  const navigate = useNavigate();
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("loggedInUser");
+
+    if (!loggedInUser) {
+      navigate("/");
+    }
+  }, []);
+  function LogoutUser() {
+    localStorage.removeItem("loggedInUser");
+    navigate("/");
+  }
   return (
     <>
       <title>Ecommerce Project</title>
@@ -50,6 +64,9 @@ export function HomePage({
                 rating={productitem.rating}
               />
             ))}
+        <div className="logoutbutton" onClick={LogoutUser}>
+          Logout
+        </div>
       </div>
       {/* <OrdersSection /> */}
       {/* <CartSectionHeader />

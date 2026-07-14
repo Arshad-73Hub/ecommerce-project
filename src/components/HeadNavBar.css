@@ -20,14 +20,7 @@ a {
     height:60px;
     padding:0px 15px 0px 15px;
 }
-@media screen and (width>=670px) {
-    .logoImage{
-    display: flex;
-}
-.logoImage2{
-    display: none;
-}
-}
+
 .logoImagediv{
     display: inline-block;
     padding:6px 9.5px;
@@ -43,14 +36,7 @@ a {
     max-height:26px;
     margin-top: 1px;
 }
-@media screen and (width<=670px) {
-    .logoImage{
-    display: none;
-}
-.logoImage2{
-    display: flex;
-}
-}
+
 .cartImage{
     width:30px;
     margin-right: 5px;
@@ -176,13 +162,13 @@ border:1px solid rgba(0,0,0,0);
     padding:2px 3.5px;
     }
     .headnavbar{
-        padding:0px 8px 0px 8px;
+        padding:0px 12px 0px 12px;
     }
    .logoutbutton{
     position:fixed;
-    right:10px;
     bottom:10px;
-   }
+    right:10px;
+   }    
 }
 
 @media screen and (width>=420px){
@@ -196,3 +182,21 @@ border:1px solid rgba(0,0,0,0);
 
 
 }
+@media screen and (width<=670px) {
+    .logoImage{
+    display: none;
+}
+.logoImage2{
+    display: flex;
+}
+}
+
+@media screen and (width>=670px) {
+    .logoImage{
+    display: flex;
+}
+.logoImage2{
+    display: none;
+}
+}
+
